@@ -1,0 +1,25 @@
+.special-animation::before,
+.special-animation::after {
+	display: block;
+	position: absolute;
+	content: "";
+	transition: 0.4s;
+	z-index: -1;
+}
+
+.special-animation::before {
+	top: -47px;
+	left: -350px;
+	height: 200%;
+	width: 80%;
+	background-image: linear-gradient(
+		-60deg,
+		rgba(244, 225, 8, 0.4),
+		rgba(232, 193, 16, 0)
+	);
+	transform: rotate(31deg);
+}
+
+.special-animation:hover::before {
+	left: 130%;
+}

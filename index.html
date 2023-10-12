@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FotoStory</title>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6a3a43f5a1.js" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="dist/css/style.min.css">
+</head>
+
+<body>
+
+    <nav class="navigation">
+        <div class="wrapper">
+            <div class="navbar">
+                <div class="navbar__logo">
+                    <a href=""><i class="fa-solid fa-camera-retro"></i>FotoStory</a>
+                </div>
+                <button class="navbar__btn"><i class="fa-solid fa-bars"></i></button>
+                <ul class="navbar__nav desktop">
+                    <li class="navbar__nav-link"><a class="nav-link" href="#aboutus">
+                            <i class="fa-solid fa-user-group"></i>O nas</a>
+                    <li class="navbar__nav-link"><a class="nav-link" href="#portfolio">
+                            <i class="fa-solid fa-regular fa-folder-open"></i>Portfolio</a>
+                    <li class="navbar__nav-link"><a class="nav-link" href="#offers">
+                            <i class="fa-solid fa-camera"></i>Oferta</a>
+                    <li class="navbar__nav-link"><a class="nav-link" href="#contact">
+                            <i class="fa-solid fa-phone"></i>Kontakt</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="box-shadow"></div>
+        <div class="header__text">
+            <h1>Uchwycimy każdą chwilę</h1>
+            <p><span>Fotografia to jedyna rzecz, która zatrzymuje chwilę na zawsze</span> - Aaron Siskind</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="aboutus wrapper" id="aboutus">
+            <h2 class="second-title">Kilka słów o nas</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card__img card__img-one"></div>
+                    <h3>Michał</h3>
+                    <p class="card__info">Fotografia to dla mnie więcej niż tylko praca – to sposób na życie. Poprzez
+                        obiektyw kamery widzę świat w zupełnie inny sposób, chwytając emocje, kolory i detale, które
+                        inaczej mogłyby umknąć uwadze.</p>
+                </div>
+                <div class="card">
+                    <div class="card__img card__img-two"></div>
+                    <h3>Ania</h3>
+                    <p class="card__info">Moja misja to odkrywanie piękna w codziennych sytuacjach oraz tworzenie
+                        unikalnych historii za pomocą obiektywu aparatu. </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="counter">
+            <div class="counter__img">
+                <div class="img-shadow"></div>
+                <div class="counter__box">
+                    <div class="wrapper">
+                        <div class="counter__box-item">
+                            <img src="dist/img/icons/users.svg" alt="ikona przedstawiająca używkowników">
+                            <div class="counter-area" data-number='1967'>0</div>
+                            <p>Zadowolonych klientów</p>
+                        </div>
+                        <div class="counter__box-item">
+                            <img src="dist/img/icons/trophy.svg" alt="ikona przedstawiająca trofeum">
+                            <div class="counter-area" data-number='200'>0</div>
+                            <p>Zdobytych nagród</p>
+                        </div>
+                        <div class="counter__box-item">
+                            <img src="dist/img/icons/album.svg" alt="ikona symbolizująca album">
+                            <div class="counter-area" data-number='128967'>0</div>
+                            <p>Stworzonych albumów</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+
+            <div class="wrapper">
+                <h2 class="second-title">Kilka naszych zdjęć</h2>
+                <div class="portfolio">
+
+                    <div class="album album-one">
+                        <div class="album__photo album__photo-one"></div>
+                        <div class="album__name album__name-one">
+                            <p>Ślub Ani i Tomka</p>
+                        </div>
+                    </div>
+                    <div class="album album-two">
+                        <div class="album__photo album__photo-two"></div>
+                        <div class="album__name">
+                            <p>Wesele Adama i Ewy</p>
+                        </div>
+                    </div>
+                    <div class="album album-three">
+                        <div class="album__photo album__photo-three"></div>
+                        <div class="album__name">
+                            <p>Sesja małżeńska</p>
+                        </div>
+                    </div>
+                    <div class="album album-four">
+                        <div class="album__photo album__photo-four"></div>
+                        <div class="album__name">
+                            <p>Sesja dla rodzeństwa</p>
+                        </div>
+                    </div>
+                    <div class="album album-five">
+                        <div class="album__photo album__photo-five"></div>
+                        <div class="album__name">
+                            <p>Pierwsze chwile Janka</p>
+                        </div>
+                    </div>
+                    <div class="album album-six">
+                        <div class="album__photo album__photo-six"></div>
+                        <div class="album__name">
+                            <p>Sesja Basi z pupilem</p>
+                        </div>
+                    </div>
+                    <a class="portfolio__more" href="projects.html">Zobacz więcej...</a>
+                </div>
+            </div>
+        </section>
+
+        <h2 class="second-title">Najnowsze oferty</h2>
+        <section class="offers" id="offers">
+            <div class="bg-shadow"></div>
+            <div class="wrapper">
+                <div class="offers__boxes">
+                    <div class="offers__box offers__box-one">
+                        <div class="img-box img-box-one">
+                        </div>
+                        <div class="offers__info">
+                            <h3>Rodzinna sesja</h3>
+                            <p>Uchwycamy wspomnienia, które będą trwać przez pokolenia.</p>
+                            <p>Nasze doświadczenie gwarantuje wspaniałą atmosferę.</p>
+                            <button class="offers__info-btn special-animation"><a href="#contact">Dowiedz się
+                                    więcej</a></button>
+                        </div>
+                    </div>
+                    <div class="offers__box offers__box-two offers__box-right">
+                        <div class="img-box img-box-two right">
+                        </div>
+                        <div class="offers__info">
+                            <h3>Sesja dla dwojga</h3>
+                            <p>Fotografia, która oddaje waszą miłość i jedność.</p>
+                            <p>Każdy moment z Tobą jest piękny, a my uwieczniamy ten szczególny dzień.</p>
+                            <button class="offers__info-btn special-animation"><a href="#contact">Dowiedz się
+                                    więcej</a></button>
+                        </div>
+                    </div>
+                    <div class="offers__box offers__box-three">
+                        <div class="img-box img-box-three">
+                        </div>
+                        <div class="offers__info">
+                            <h3>Sesja ślubna</h3>
+                            <p>Nasza misja to uwiecznić waszą miłość w pięknych kadrach.</p>
+                            <p>Niezapomniane wspomnienia pełne miłości i romantyzmu.</p>
+                            <button class="offers__info-btn special-animation"><a href="#contact">Dowiedz się
+                                    więcej</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h2 class="second-title">Jesteśmy dla Ciebie</h2>
+        <section class="gallery">
+            <img src="dist/img/drone-3453361_640-small.jpg" alt="mężczyzna z dronem do fotografowania">
+            <img src="dist/img/camera-4830248_640-small.jpg" alt="zdjęcie aparatu fotograficznego">
+            <img src="dist/img/family-1237701_640-small.jpg" alt="zdjęcie rodziny dwie osoby oraz dziecko">
+            <img src="dist/img/photographs-stuff-small.jpg" alt="zdjęcie narzędzi fotografa">
+            <img src="dist/img/couple-1867098_640-small.jpg" alt="zdjęcie przedstawiające parę zakochanych">
+            <img src="dist/img/children-817365_640-small.jpg" alt="zdjęcie dwójki dzieci trzymających się za dłonie">
+            <img src="dist/img/father-and-son-1153919_1280-small.jpg" alt="zdjęcie mężczyzny trzymającego niemowlę na rękach">
+            <img src="dist/img/sunset-698501_640-small.jpg" alt="zdjęcie zachodu słońca">
+            <img src="dist/img/baby-2616673_640-small.jpg" alt="zdjęcie mężczyzny trzymającego niemowlę na rękach">
+            <img src="dist/img/mountains-1761292_640-small.jpg" alt="zdjęcie gór">
+            <img src="dist/img/father-22194_640-small.jpg" alt="mężczyzna leżący z niemowlęciem">
+            <img src="dist/img/father-and-son-2258681_640-small.jpg" alt="mężczyzna z synem idący wzdłuż torów">
+            <img src="dist/img/man-3672010_640-small.jpg" alt="fotograf">
+            <img src="dist/img/sunset-815270_640-small.jpg" alt="fotografia zachodu słońca">
+        </section>dist
+    </main>
+
+    <h2 class="second-title">Kontakt</h2>
+    <footer class="footer" id="contact">
+        <div class="footer-shadow"></div>
+        <div class="wrapper">
+            <div class="footer__box">
+                <div class="footer__box-socials">
+                    <h3>Znajdź nas:</h3>
+                    <div class="icons top">
+                        <a href=""><img src="dist/img/icons/brand-facebook.svg" alt="ikona portalu facebook" class="icon-link icon-link-top"></a>
+                        <a href=""><img src="dist/img/icons/brand-instagram.svg" alt="ikona portalu instagram"
+                                class="icon-link icon-link-top"></a>
+                        <a href=""><img src="dist/img/icons/brand-tiktok.svg" alt="ikona portalu tiktok" class="icon-link icon-link-top"></a>
+                    </div>
+                </div>
+                <div class="footer__box-contact">
+                    <h3>Skontaktuj się z nami:</h3>
+                    <div class="icons bottom">
+                        <p class="title">Nr tel:</p>
+                        <p> 123-123-123</p>
+                        <img src="dist/img/icons/phone-call.svg" alt="ikona słuchawki telefonicznej" class="icon-link">
+                        <p class="title">Adres e-mail: </p>
+                        <p>example@example.com</p>
+                        <img src="dist/img/icons/mail.svg" alt="ikona koperty pocztowej" class="icon-link">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="footer__bottom"> &copy; <span class="footer__year"></span> FotoStory</p>
+    </footer>
+
+
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="dist/js/slick.min.js"></script>
+    <script src="dist/js/counter.min.js"></script>
+    <script src="dist/js/script.min.js"></script>
+</body>
+
+</html>

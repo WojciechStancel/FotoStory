@@ -1,0 +1,788 @@
+@charset "UTF-8";
+.special-animation::before,
+.special-animation::after {
+  display: block;
+  position: absolute;
+  content: "";
+  transition: 0.4s;
+  z-index: -1;
+}
+
+.special-animation::before {
+  top: -47px;
+  left: -350px;
+  height: 200%;
+  width: 80%;
+  background-image: linear-gradient(-60deg, rgba(244, 225, 8, 0.4), rgba(232, 193, 16, 0));
+  transform: rotate(31deg);
+}
+
+.special-animation:hover::before {
+  left: 130%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 100.5px;
+}
+
+body {
+  height: 100vh;
+  font-family: "Cormorant Garamond", sans-serif;
+  color: black;
+  background-color: rgba(111, 111, 111, 0.3411764706);
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  background-color: lightcyan;
+  width: 100%;
+  border-bottom: 1px solid black;
+  z-index: 50;
+}
+.navigation .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5em;
+}
+.navigation .navbar__logo {
+  display: block;
+  text-align: center;
+}
+.navigation .navbar__logo .fa-solid {
+  padding: 0 0.5em;
+}
+.navigation .navbar__logo a {
+  font-size: 2.2rem;
+  text-decoration: none;
+  padding: 0.5em;
+  text-align: center;
+  color: black;
+  transition: color 0.4s;
+}
+.navigation .navbar__logo a:hover {
+  color: rgb(147, 125, 0);
+}
+.navigation .navbar__btn {
+  margin: 0;
+  padding: 1.2em;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.navigation .navbar__btn .fa-bars {
+  color: black;
+  font-size: 3rem;
+}
+.navigation .navbar__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 5em;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: calc(100vh - 5em);
+  transform: translateX(100%);
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0;
+}
+.navigation .navbar__nav-link {
+  margin-top: 1.5em;
+  font-size: 2.5rem;
+  list-style: none;
+  text-transform: uppercase;
+}
+.navigation .navbar__nav-link .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  color: black;
+  transition: color 0.4s;
+}
+.navigation .navbar__nav-link .nav-link:hover {
+  color: rgb(147, 125, 0);
+}
+.navigation .show-menu {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.header {
+  height: 60vh;
+  margin-top: 8em;
+  background-image: url("../img/photographs-stuff-small.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+.header .box-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.header__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  font-size: 2.2rem;
+  font-family: "Cormorant Garamond";
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+.header__text p {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0 0.5em;
+}
+.header__text p span {
+  font-style: italic;
+}
+
+.second-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.aboutus {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.aboutus .cards {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.aboutus .card {
+  width: 100%;
+  padding: 1em;
+}
+.aboutus .card__img {
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  border: 1px solid black;
+  box-shadow: 3px 3px 3px black;
+}
+.aboutus .card__img-one {
+  background-image: url("../img/stuart-bailey-8106891_640-small.jpg");
+}
+.aboutus .card__img-two {
+  background-image: url("../img/photographer-1773331_640-small.jpg");
+}
+.aboutus .card__info {
+  margin-top: 0.5em;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.3em;
+  box-shadow: 3px 2px 2px black;
+  border: 1px solid rgba(111, 111, 111, 0.3411764706);
+  overflow: hidden;
+}
+.aboutus .card h3 {
+  padding: 1em 0 0 0.5em;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.counter {
+  margin-top: 2em;
+  height: 85vh;
+}
+.counter__img {
+  position: relative;
+  height: 100%;
+  background-image: url("../img/camera-4830248_640-small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.counter__img .img-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.counter__img .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.counter__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: rgb(255, 255, 255);
+}
+.counter__box-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.counter__box-item p {
+  font-size: 1.5rem;
+  margin-top: 1.5em;
+  text-align: center;
+}
+.counter__box-item img {
+  margin-top: 1em;
+  width: 4em;
+}
+.counter__box-item .counter-area {
+  font-size: 4rem;
+}
+
+.portfolio {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(24, 1fr);
+  margin-top: 2em;
+}
+.portfolio .album {
+  box-shadow: 2px 2px 2px black;
+  border: 1px solid black;
+}
+.portfolio .album__photo {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+.portfolio .album__name {
+  margin: 0.5em 0;
+  font-size: 1.4rem;
+  text-align: center;
+}
+.portfolio .album__photo-one {
+  background-image: url("../img/wedding-1850074_640-small.jpg");
+}
+.portfolio .album__photo-two {
+  background-image: url("../img/wedding-1854074_640-small.jpg");
+}
+.portfolio .album__photo-three {
+  background-image: url("../img/ślub-small.jpg");
+}
+.portfolio .album__photo-four {
+  background-image: url("../img/children-817365_640-small.jpg");
+}
+.portfolio .album__photo-five {
+  background-image: url("../img/father-and-son-1153919_1280-small.jpg");
+}
+.portfolio .album__photo-six {
+  background-image: url("../img/paw-7231300_640-small.jpg");
+}
+.portfolio__more {
+  grid-column: 1/-1;
+  grid-row: 25/26;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding: 0.5em;
+  margin: 0 2em;
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
+  border-radius: 8px;
+  transition: color 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+.portfolio__more:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(22, 20, 20);
+}
+.portfolio .album-one {
+  grid-column: 2/6;
+  grid-row: 1/7;
+}
+.portfolio .album-two {
+  grid-column: 7/11;
+  grid-row: 1/7;
+}
+.portfolio .album-three {
+  grid-column: 2/6;
+  grid-row: 9/15;
+}
+.portfolio .album-four {
+  grid-column: 7/11;
+  grid-row: 9/15;
+}
+.portfolio .album-five {
+  grid-column: 2/6;
+  grid-row: 17/23;
+}
+.portfolio .album-six {
+  grid-column: 7/11;
+  grid-row: 17/23;
+}
+
+.offers {
+  margin-top: 2em;
+  background-image: url("../img/sunset-698501_640-small.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+.offers .bg-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.offers__boxes {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2em;
+}
+.offers__box {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  margin: 2em 0;
+  height: 250px;
+  overflow: hidden;
+  z-index: 10;
+  box-shadow: 2px 2px 2px rgb(22, 20, 20);
+}
+.offers__box-right .right {
+  order: 1;
+}
+.offers__box .img-box {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s;
+}
+.offers__box .img-box:hover {
+  transform: scale(1.1);
+}
+.offers__box .img-box-one {
+  background-image: url("../img/children-817365_640-small.jpg");
+}
+.offers__box .img-box-two {
+  background-image: url("../img/couple-1867098_640-small.jpg");
+}
+.offers__box .img-box-three {
+  background-image: url("../img/ślub-small.jpg");
+}
+.offers__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  z-index: 20;
+}
+.offers__info h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.offers__info p {
+  font-size: 1.2rem;
+  padding: 0.5em;
+}
+.offers__info-btn {
+  margin-top: 1em;
+  padding: 0.5em;
+  background: none;
+  position: relative;
+  overflow: hidden;
+  width: 60%;
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.offers__info-btn a {
+  color: black;
+  text-decoration: none;
+  font-family: "cormoran garamond";
+}
+
+.gallery {
+  width: 100%;
+  margin-top: 2em;
+}
+.gallery img {
+  height: 300px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery img:nth-child(odd) {
+  display: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 100%;
+  position: relative;
+  margin-top: 1em;
+  background-image: url("../img/family-6639676_640-footer-small.jpg");
+  background-size: cover;
+  background-position: center;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+.footer .footer-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+.footer__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 400px;
+  margin-top: 0;
+  position: absolute;
+  background-color: rgba(111, 111, 111, 0.3411764706);
+  z-index: 10;
+}
+.footer__box-socials, .footer__box-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__box-socials h3, .footer__box-contact h3 {
+  display: flex;
+  font-size: 2rem;
+}
+.footer__box-socials .icons, .footer__box-contact .icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+.footer__box-socials .icons p, .footer__box-contact .icons p {
+  font-size: 1.8rem;
+  margin: 0.2em 0;
+}
+.footer__box-socials .icons .icon-link-top, .footer__box-contact .icons .icon-link-top {
+  cursor: pointer;
+  transition: transform 0.4s;
+  padding: 0.3em;
+  width: 45px;
+}
+.footer__box-socials .icons .icon-link-top:hover, .footer__box-contact .icons .icon-link-top:hover {
+  transform: scale(1.1);
+}
+.footer__box-socials .top, .footer__box-contact .top {
+  flex-direction: row;
+}
+.footer__bottom {
+  position: absolute;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  padding: 0.5em;
+  font-size: 2rem;
+  text-align: center;
+  z-index: 11;
+  bottom: 0;
+}
+
+.under-construction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10em;
+}
+.under-construction .build {
+  width: 80%;
+  height: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px black;
+}
+.under-construction h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 2em 0.5em;
+}
+
+.show-animation {
+  animation: show-right 0.5s both;
+}
+
+.navbar__nav .navbar__nav-link:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.navbar__nav .navbar__nav-link:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.navbar__nav .navbar__nav-link:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.navbar__nav .navbar__nav-link:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes show-right {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@media (min-width: 768px) {
+  .header__text {
+    font-size: 3rem;
+  }
+  .aboutus .cards {
+    flex-direction: row;
+  }
+  .aboutus .cards .card__info {
+    font-size: 2rem;
+    height: 7em;
+  }
+  .counter .wrapper {
+    flex-direction: row;
+  }
+  .counter__box-item p {
+    font-size: 2.5rem;
+  }
+  .counter__box-item img {
+    width: 6em;
+  }
+  .counter__box-item .counter-area {
+    font-size: 6rem;
+  }
+  .portfolio__more {
+    font-size: 2rem;
+    margin: 0 5em;
+    padding: 0.5em;
+  }
+  .portfolio .album__name {
+    font-size: 2.5rem;
+  }
+  .offers__info h3 {
+    font-size: 3.5rem;
+  }
+  .offers__info p {
+    font-size: 1.7rem;
+  }
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .gallery img:nth-child(odd) {
+    display: block;
+  }
+  .footer__box {
+    width: 500px;
+    height: 80%;
+  }
+  .footer__box-socials h3, .footer__box-contact h3 {
+    font-size: 2rem;
+  }
+  .footer__box-socials p, .footer__box-contact p {
+    font-size: 2rem;
+  }
+  .footer__box-socials .icons .icon-link-top, .footer__box-contact .icons .icon-link-top {
+    width: 35px;
+  }
+  .footer__box-socials .bottom .title, .footer__box-contact .bottom .title {
+    font-size: 2rem;
+  }
+  .footer__box-socials .bottom p, .footer__box-contact .bottom p {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .navigation .navbar__btn {
+    display: none;
+  }
+  .navigation .navbar__logo {
+    position: absolute;
+    z-index: 12;
+  }
+  .navigation .navbar__nav {
+    flex-direction: row;
+    opacity: 1;
+    transform: translateX(0);
+    height: 5em;
+    top: 0;
+    right: 10em;
+    justify-content: flex-end;
+    background-color: transparent;
+  }
+  .navigation .navbar__nav-link {
+    padding: 1em;
+    margin-top: 0;
+  }
+  .navigation .navbar__nav-link .nav-link {
+    padding: 0 1em;
+    font-size: 2rem;
+  }
+  .navigation .navbar__nav-link .nav-link .fa-solid {
+    padding: 0.5em 0;
+  }
+  .offers__box {
+    height: 350px;
+  }
+}
+@media (min-height: 850px) {
+  .footer__box-socials h3, .footer__box-contact h3 {
+    font-size: 3rem;
+  }
+  .footer__box-socials p, .footer__box-contact p {
+    font-size: 2.3rem;
+  }
+  .footer__box-socials .icons .icon-link-top, .footer__box-contact .icons .icon-link-top {
+    width: 45px;
+  }
+  .footer__box-socials .bottom .title, .footer__box-contact .bottom .title {
+    font-size: 3rem;
+  }
+  .footer__box-socials .bottom p, .footer__box-contact .bottom p {
+    font-size: 2rem;
+    padding: 0.2em 0;
+  }
+}
+@media (min-width: 1200px) {
+  .portfolio {
+    height: 240vh;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(106, 1fr);
+  }
+  .portfolio .album__photo-one {
+    background-image: url("../img/para-młoda-big.jpg");
+  }
+  .portfolio .album__photo-two {
+    background-image: url("../img/wedding-1854074_1920-big.jpg");
+  }
+  .portfolio .album__photo-three {
+    background-image: url("../img/ślub-big.jpg");
+  }
+  .portfolio .album__photo-four {
+    background-image: url("../img/children-817365_1920-big.jpg");
+  }
+  .portfolio .album__photo-five {
+    background-image: url("../img/father-and-son-1153919_1920-big.jpg");
+  }
+  .portfolio .album__photo-six {
+    background-image: url("../img/paw-7231300_1920-big.jpg");
+  }
+  .portfolio .album__name {
+    font-size: 3rem;
+  }
+  .portfolio .album-one {
+    grid-column: 2/6;
+    grid-row: 1/30;
+  }
+  .portfolio .album-two {
+    grid-column: 7/11;
+    grid-row: 1/30;
+  }
+  .portfolio .album-three {
+    grid-column: 2/6;
+    grid-row: 34/63;
+  }
+  .portfolio .album-four {
+    grid-column: 7/11;
+    grid-row: 34/63;
+  }
+  .portfolio .album-five {
+    grid-column: 2/6;
+    grid-row: 68/97;
+  }
+  .portfolio .album-six {
+    grid-column: 7/11;
+    grid-row: 68/97;
+  }
+  .portfolio__more {
+    grid-row: 103/106;
+    margin: 0 10em;
+  }
+  .offers__box {
+    height: 450px;
+  }
+  .offers__box .img-box-one {
+    background-image: url("../img/family-1237701_1920-big.jpg");
+  }
+  .offers__box .img-box-two {
+    background-image: url("../img/couple-1867098_1920-big.jpg");
+  }
+  .offers__box .img-box-three {
+    background-image: url("../img/ślub-big.jpg");
+  }
+  .footer {
+    background-image: url("../img/family-6639676_1920-footer-big.jpg");
+  }
+  .under-construction .build {
+    width: 50%;
+    height: 40%;
+  }
+}/*# sourceMappingURL=style.css.map */
