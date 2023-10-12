@@ -79,6 +79,11 @@ body {
 				color: $black;
 				font-size: 3rem;
 			}
+
+			&:hover, &:focus {
+				outline: none;
+				border: 1px solid $pure-white;
+			}
 		}
 
 		&__nav {
@@ -208,7 +213,6 @@ body {
 			margin-top: 0.5em;
 			font-size: 1.5rem;
 			text-align: center;
-			// height: 6em;
 			padding: 0.3em;
 			box-shadow: 3px 2px 2px $black;
 			border: 1px solid $main-color;
@@ -334,7 +338,7 @@ body {
 		justify-content: center;
 		align-items: center;
 		font-size: 2rem;
-		padding: .5em;
+		padding: 0.5em;
 		margin: 0 2em;
 		text-decoration: none;
 		color: $black;
@@ -596,9 +600,8 @@ body {
 	h3 {
 		font-size: 2.5rem;
 		text-align: center;
-		padding: 2em .5em;
+		padding: 2em 0.5em;
 	}
-
 }
 
 .show-animation {
@@ -625,6 +628,30 @@ body {
 
 	to {
 		transform: translateX(0);
+	}
+}
+
+@media (max-height: 520px) {
+	.navbar {
+		.navbar__nav-link {
+			font-size: 1.5rem;
+		}
+	}
+
+	.counter {
+		&__box {
+			.wrapper {
+				flex-direction: row;
+			}
+		}
+	}
+
+	.footer {
+		height: 120vh;
+
+		&__box {
+			height: 370px;
+		}
 	}
 }
 
@@ -783,7 +810,6 @@ body {
 @media (min-height: 850px) {
 	.footer {
 		&__box {
-
 			&-socials,
 			&-contact {
 				h3 {
