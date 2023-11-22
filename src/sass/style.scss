@@ -44,7 +44,7 @@ body {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 5em;
+		height: 6em;
 
 		&__logo {
 			display: block;
@@ -778,6 +778,7 @@ body {
 				opacity: 1;
 				transform: translateX(0);
 				height: 5em;
+				line-height: 1em;
 				top: 0;
 				right: 10em;
 				justify-content: flex-end;
