@@ -1,4 +1,4 @@
-<h1>Hi everyone! I am happy that you here!</h1>
+<h1>Hi everyone! I am happy that you here! :wave:</h1>
 
 ### Photography Portfolio Website <img width="25px" src="https://github.com/WojciechStancel/FotoStory/assets/121879383/b1017e83-6787-47e6-8afb-6ede0adf4f9f">
 
